@@ -1,0 +1,149 @@
+/* styles.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  background-color: #282c34;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Header Styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 150px; /* Adjust logo size */
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav ul li a:hover {
+  background-color: #ff5722; /* Button hover color */
+}
+
+/* Hero Section Styling */
+.hero {
+  height: 100vh;
+  background-image: url("background.jpg"); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  margin-top: 60px; /* Adjust for the fixed header */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+  z-index: 1;
+}
+
+.hero-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 500px;
+  text-align: left;
+  margin-right: 40px; /* Space between text and image */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #ff5722;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #e64a19; /* Darker orange on hover */
+}
+
+/* Hero Image Styling */
+.hero-image img {
+  max-width: 400px; /* Adjust image size */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* About Section Styling */
+.about {
+  padding: 60px 20px;
+  background-color: #333;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff5722;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #ddd;
+}
+.quiz-btn:link {
+  text-decoration: none;
+  color: white;
+}
+.quiz-btn:visited {
+  color: white;
+}

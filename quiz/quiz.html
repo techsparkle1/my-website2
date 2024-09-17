@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Quiz</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f2f5;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        color: #4caf50;
+      }
+
+      h2 {
+        margin-top: 40px;
+        font-size: 1.8em;
+        color: #007bff;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+      }
+
+      h2.euc {
+        color: #1abc9c;
+      }
+
+      h2.pcd {
+        color: #e74c3c;
+      }
+
+      h2.datacomms {
+        color: #3498db;
+      }
+
+      .question {
+        margin: 30px 0;
+        text-align: left;
+      }
+
+      .question h3 {
+        font-size: 1.2em;
+        color: #444;
+      }
+
+      .options {
+        padding-left: 20px;
+      }
+
+      .options label {
+        display: block;
+        margin-bottom: 8px;
+        cursor: pointer;
+        font-size: 1.05em;
+        transition: background-color 0.3s ease;
+      }
+
+      .options input {
+        margin-right: 10px;
+      }
+
+      .options label:hover {
+        background-color: #f9f9f9;
+      }
+
+      .submit-btn {
+        margin-top: 30px;
+        padding: 12px 20px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .submit-btn:hover {
+        background-color: #45a049;
+      }
+
+      .result {
+        font-size: 1.3em;
+        margin-top: 40px;
+        color: #333;
+      }
+
+      .correct-answer {
+        color: #e74c3c;
+        font-weight: bold;
+      }
+
+      .section-container {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+
+      /* Custom section colors */
+      .section-container.euc {
+        border-left: 5px solid #1abc9c;
+      }
+
+      .section-container.pcd {
+        border-left: 5px solid #e74c3c;
+      }
+
+      .section-container.datacomms {
+        border-left: 5px solid #3498db;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Team Quiz</h1>
+
+      <!-- EUC Section -->
+      <div class="section-container euc">
+        <h2 class="euc">End User Computing (EUC)</h2>
+
+        <!-- EUC Question 1 -->
+        <div class="question" data-correct="b">
+          <h3>1) Which of the following best describes End-User Computing (EUC)?</h3>
+          <div class="options">
+            <label><input type="radio" name="euc_q1" value="a" /> a) The use of specialized servers and networks to manage data storage.</label>
+            <label><input type="radio" name="euc_q1" value="b" /> b) The involvement of end-users in the development and use of applications and software.</label>
+            <label><input type="radio" name="euc_q1" value="c" /> c) The exclusive use of IT departments to manage and maintain all software systems.</label>
+            <label><input type="radio" name="euc_q1" value="d" /> d) The use of large-scale data centers to support enterprise computing needs.</label>
+          </div>
+        </div>
+
+        <!-- EUC Question 2 -->
+        <div class="question" data-correct="b">
+          <h3>2) What is the primary purpose of End-User Computing?</h3>
+          <div class="options">
+            <label><input type="radio" name="euc_q2" value="a" /> a) To reduce IT costs by outsourcing data management.</label>
+            <label><input type="radio" name="euc_q2" value="b" /> b) To enable end-users to create and manage their own applications and data.</label>
+            <label><input type="radio" name="euc_q2" value="c" /> c) To enforce strict IT policies and controls over all computing resources.</label>
+            <label><input type="radio" name="euc_q2" value="d" /> d) To centralize all computing processes within the IT department.</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- PCD Section -->
+      <div class="section-container pcd">
+        <h2 class="pcd">Process Control Domain (PCD)</h2>
+
+        <!-- PCD Question 1 -->
+        <div class="question" data-correct="a">
+          <h3>1) What does OT stand for in the context of cybersecurity?</h3>
+          <div class="options">
+            <label><input type="radio" name="pcd_q1" value="a" /> a) Operational Technology</label>
+            <label><input type="radio" name="pcd_q1" value="b" /> b) Organizational Training</label>
+            <label><input type="radio" name="pcd_q1" value="c" /> c) Online Transactions</label>
+            <label><input type="radio" name="pcd_q1" value="d" /> d) Open Technology</label>
+          </div>
+        </div>
+
+        <!-- PCD Question 2 -->
+        <div class="question" data-correct="b">
+          <h3>2) What does PCD stand for?</h3>
+          <div class="options">
+            <label><input type="radio" name="pcd_q2" value="a" /> a) Personal Computer Domain</label>
+            <label><input type="radio" name="pcd_q2" value="b" /> b) Process Control Domain</label>
+            <label><input type="radio" name="pcd_q2" value="c" /> c) Public Control Device</label>
+            <label><input type="radio" name="pcd_q2" value="d" /> d) Private Communication Device</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Comms Section -->
+      <div class="section-container datacomms">
+        <h2 class="datacomms">Data Communications (Data Comms)</h2>
+
+        <!-- Data Comms Question 1 -->
+        <div class="question" data-correct="b">
+          <h3>1) At which layer of the OSI model does error detection and correction occur?</h3>
+          <div class="options">
+            <label><input type="radio" name="datacomms_q1" value="a" /> a) Physical Layer</label>
+            <label><input type="radio" name="datacomms_q1" value="b" /> b) Data Link Layer</label>
+            <label><input type="radio" name="datacomms_q1" value="c" /> c) Network Layer</label>
+            <label><input type="radio" name="datacomms_q1" value="d" /> d) Transport Layer</label>
+          </div>
+        </div>
+
+        <!-- Data Comms Question 2 -->
+        <div class="question" data-correct="b">
+          <h3>2) Which OSI layer is responsible for path determination and logical addressing?</h3>
+          <div class="options">
+            <label><input type="radio" name="datacomms_q2" value="a" /> a) Session Layer</label>
+            <label><input type="radio" name="datacomms_q2" value="b" /> b) Network Layer</label>
+            <label><input type="radio" name="datacomms_q2" value="c" /> c) Data Link Layer</label>
+            <label><input type="radio" name="datacomms_q2" value="d" /> d) Application Layer</label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button class="submit-btn" onclick="checkAnswers()">Submit Answers</button>
+      <div class="result"></div>
+    </div>
+
+    <script>
+      function checkAnswers() {
+        let score = 0;
+        const questions = document.querySelectorAll('.question');
+        questions.forEach((question) => {
+          const correctAnswer = question.getAttribute('data-correct');
+          const selectedAnswer = question.querySelector('input[type="radio"]:checked');
+          if (selectedAnswer && selectedAnswer.value === correctAnswer) {
+            score++;
+          } else {
+            question.querySelector('h3').innerHTML +=
+              ' <span class="correct-answer">(Correct Answer: ' + correctAnswer.toUpperCase() + ')</span>';
+          }
+        });
+        document.querySelector('.result').innerHTML = 'Your score is ' + score + ' out of ' + questions.length;
+      }
+    </script>
+  </body>
